@@ -18,7 +18,7 @@ def build(p):
     html = html.replace('\n    ', '\n')
     with open(f"{p}/index.js", 'r', encoding='utf-8') as js_file:
         js = js_file.read()
-    html = html.replace('<script type="text/babel" src="index.js"></script>', f'<script>\n{js}\n</script>')
+    html = html.replace('<script type="text/babel" src="index.js"></script>', f'<script type="text/babel">\n{js}\n</script>')
     html = html[html.index('<body>') + 6 : html.index('</body>')]
     dest_file_name = p[p.rindex('/') + 1 : len(p)]
     dest_path = f'{os.getcwd().replace('\\', '/')}/build/{dest_file_name}.html'
