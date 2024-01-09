@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Name generator</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" crossorigin="anonymous" />
+    <style type="text/scss">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inconsolata', serif;
+        }
+        .name-generator {
+            padding: 20px;
+        }
+        .setting {
+            padding: 20px 0;
+            border-bottom: 1px solid #000;
+            .word-list {
+                margin-right: 20px;
+            }
+        }
+        .controls {
+            padding: 20px 0;
+            border-bottom: 1px solid #000;
+            span.connector {
+                margin-right: 5px;
+            }
+            input.connector {
+                margin-right: 20px;
+                width: 60px;
+                text-align: center;
+            }
+            span.quantity {
+                margin-right: 5px;
+            }
+            input.quantity {
+                margin-right: 5px;
+                width: 100px;
+                text-align: right;
+            }
+        }
+        .output {
+            padding: 20px 0;
+            color: #000;
+            ul {
+                line-height: 32px;
+                li {
+                    color: #000;
+                }
+            }
+        }
+    </style>
+    <div id="root"></div>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin="anonymous"></script>
+    <script type="text/babel" src="index.js"></script>
+</body>
+</html>
