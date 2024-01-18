@@ -56,7 +56,8 @@ function App() {
     }
 
     function handleQuantityChange(v) {
-        setQuantity(v);
+        let q = parseInt(v) || 1;
+        setQuantity(q < 1 ? 1 : q);
     }
 
     function handleConnectorChange(v) {

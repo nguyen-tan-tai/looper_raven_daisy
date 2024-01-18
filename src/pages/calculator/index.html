@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Json formatter</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js" crossorigin="anonymous"></script>
+    <style type="text/scss">
+        * {
+            box-sizing: border-box;
+        }
+        textarea {
+            outline: none;
+            border: 1px solid #cbd5e0;
+            resize: vertical;
+            width: 100%;
+            padding: 5px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inconsolata', serif;
+        }
+        .input-json {
+            min-height: 100px;
+        }
+        .control {
+            padding: 2px 0 5px;
+            label {
+                margin-left: 40px;
+                vertical-align: middle;
+                input {
+                    margin-left: 5px;
+                    vertical-align: middle;
+                }
+                &.is-min {
+                    cursor: pointer;
+                    input {
+                        cursor: pointer;
+                    }
+                }
+                &.indent > input {
+                    width: 60px;
+                }
+            }
+        }
+        .output-json {
+            min-height: 400px;
+        }
+    </style>
+    <div id="root"></div>
+    <script type="text/javascript" src="https://unpkg.com/babel-standalone@6/babel.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin="anonymous"></script>
+    <script type="text/babel" src="index.js"></script>
+</body>
+</html>
